@@ -1,0 +1,41 @@
+#content {border: 1px solid #ccc;padding: 10px;background-color: #f9f9f9;}
+#contentText {width: 100%;height: 100px;}
+#options, #showHideOptions, #functionOptions {margin-top: 20px;border: 1px solid #ccc;padding: 10px;background-color: #f9f9f9;}
+/* input[type="text"] {width: 190px;} */
+#width-hideshow{width: 190px;}
+#border-hideshow {width: 190px;}
+#height-hideshow { width: 190px;}
+#manualbordercolor { width: 190px;}
+#padding-hideshow {width: 190px;}
+#manualBgColor { width: 190px;}
+#generateCodeButton {margin-top: 20px;border: solid 1px #c1c1c1;padding: 15px;border-radius: 5px;background-color: #f0f0f0;}
+#codeOutput {display: none;margin-top: 20px;}
+#runCodeButton {border: solid 1px #c1c1c1;padding: 15px;background-color: #f0f0f0; border-radius: 5px;}
+.genrateheading{font-size: 16px;width: 100%; color: #fff;background-color: #337ab7;margin-bottom: 0px;padding: 0 10px;font-weight: bold;line-height: 36px;margin-top: 20px;}
+.heading-hideshow {margin: 0;color: #337ab7;font-weight: 800;font-size: 19px;border-bottom: solid 1px #dfdfdf;}
+li.linkOpenlists {border-bottom: 1px solid #D8D8D8;padding: 10px 0px 10px 0px;display: flex;}
+ul#styleList {list-style: none;}
+ul, ol {font-size: 16px; line-height: 21px;}
+#border-color {height: 41px;padding: 12px;width: 55px;}
+#bg-color {height: 41px;padding: 12px;width: 55px;}
+li.stylelists label {width: 107px;margin-right: 15px;font-weight: 700;}
+label {display: inline-block;margin-bottom: .5rem;}
+li.stylelists {border-bottom: 1px solid #D8D8D8;padding: 10px 0px 10px 0px;}
+ul#styleList { list-style: none;padding: 0;}
+input.inputColor {width: 45px;height: 45px;padding: 12px;}
+input.inputsTextStyle { width: 30%;margin-right: 20px;}
+ul#linkTargetList {list-style: none;padding: 0;}
+li.linkTargetlists {border-bottom: 1px solid #D8D8D8;padding: 10px 0px 10px 0px;}
+input.inputRadioBox {width: 40px;}
+.row-options {font-weight: 700;}
+ul#linkOpenList {list-style: none;padding: 0px;margin-bottom: 10px;}
+.hide { width: 25px;}
+.radio-hideshow {width: 25px;}
+#htmlCode { max-width: 100%;min-height: 130px;}
+#jsCode { max-width: 100%;min-height: 130px;}
+#cssCode { max-width: 100%;min-height: 130px;}
+li.linkTargetlists label {border-right: solid 1px #E3E3E3; border-left: solid 1px #E3E3E3;box-shadow: 1px 0 0 0 #fff, -1px 0 0 0 #fff;   padding: 10px 10px;}
+.copyButton {margin-top: 10px;border: solid 1px #c1c1c1;padding: 15px; border-radius: 5px; background-color: #f0f0f0;}
+#htmlCode ,#jsCode,#cssCode{width: 749px;}
+.hide{display: block !important;}
+li.linkOpenlists label {margin: 2px 2px 0px 2px;}

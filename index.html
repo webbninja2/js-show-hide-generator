@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+<div class="container">
+   <div class="row">
+      <div class="col-md-8 col-sm-8 form-generator">
+         <div class="page_title">
+            <div>
+               <h1>Show Hide generator</h1>
+            </div>
+         </div>
+         <div class="col-12 mt-3 description">
+            <p>JavaScript Show Hide Content</p>
+         </div>
+         <div id="content">
+            <h2 class="heading-hideshow">Show/Hide Content</h2>
+            <textarea id="contentText"placeholder="Enter some content here or add manually"></textarea>
+         </div>
+         <div id="options">
+            <h2 class="heading-hideshow">Set Content Style</h2>
+            <div class="row-options">
+               <ul id="styleList">
+                  <li class="stylelists">
+                     <label for="width">Width:</label>
+                     <input type="number" id="width-hideshow" value="500">
+                     <label for="border">Border:</label>
+                     <input type="number" id="border-hideshow" value="1">
+                  </li>
+                  <li class="stylelists">
+                     <label for="height">Height:</label>
+                     <input type="number" id="height-hideshow" value="200">
+                     <label>Border Color:</label>
+                     <input type="text" id="manualbordercolor" value="#000000">
+                     <input type="color"  class="color-picker"id="border-color" value="#000000">            
+                  </li>
+                  <li class="stylelists">
+                     <label for="padding">Padding:</label>
+                     <input type="number" id="padding-hideshow" value="5">
+                     <label>BG-Color:</label>
+                     <input type="text" id="manualBgColor" value="#ffffff">
+                     <input type="color" class="color-picker" id="bg-color" value="#FFFFFF">
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div id="showHideOptions">
+            <h2 class="heading-hideshow">Show or hide content on load</h2>
+            <div class="row-options">
+               <ul id="linkOpenList">
+                  <li class="linkOpenlists">
+                     <input type="radio"  class="hide" name="showHide" value="show" onclick="toggleContent(this.value)">
+                     <label for="button-click">Show</label>
+                     <input type="radio"  class="hide" name="showHide" value="hide" checked onclick="toggleContent(this.value)"> 
+                     <label for="on-change">Hide</label>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div id="functionOptions">
+            <h2 class="heading-hideshow">Select Show Hide Function</h2>
+            <div class="row-options">
+               <ul id="linkTargetList">
+                  <li class="linkTargetlists">
+                     <input type="radio"  class=" radio-hideshow" id="toggle-button" name="functionType" value="toggle" checked class="mr-2"> 
+                     <label for="toggle-button">Toggle Button:</label>
+                     <button type="button" id="sh_toggle_button" onclick="handleShowHide()">Show</button>
+                  </li>
+                  <li class="linkTargetlists">          
+                     <input type="radio" class=" radio-hideshow"  id="button-hide"name="functionType" value="button" class="mr-2"> 
+                     <label for="button-hide">Button:</label>
+                     <button class="btn btn-secondary" id="showButton">Show</button> 
+                     <button class="btn btn-secondary" id="hideButton">Hide</button>
+                  </li>
+                  <li class="linkTargetlists">
+                     <input type="radio"class=" radio-hideshow"  id="checke-box"name="functionType" value="checkbox" class="mr-2"> 
+                     <label for="checke-box">Checkbox: </label>Show/Hide
+                     <input type="checkbox" class=" radio-hideshow" onchange="ShowHide()" aria-label="Show hide checkbox" >            
+                  </li>
+                  <li class="linkTargetlists">
+                     <input type="radio" class=" radio-hideshow" id="radio-btn" name="functionType" value="radiobutton" class="mr-2"> 
+                     <label for="radio-btn">Radio Button:</label>
+                     <input type="radio"  class=" radio-hideshow"name="visibility" id="show_rdo" onclick="ShowHide()"> Show
+                     <input type="radio" class=" radio-hideshow"name="visibility" id="hide_rdo" onclick="ShowHide()" checked> Hide
+                  </li>
+                  <li class="linkTargetlists">
+                     <input type="radio"  class=" radio-hideshow" id="link-hide" name="functionType" value="link" class="mr-2"> 
+                     <label for="link-hide">Link:</label>
+                     <a href="#" id="show_link" onclick="ShowContent();return false">show</a>
+                     <a href="#" id="hide_link" onclick="HideContent();return false">Hide</a>
+                  </li>
+                  <li class="linkTargetlists">
+                     <input type="radio" class=" radio-hideshow"  id ="toogle-link"name="functionType" value="toggleLink" class="mr-2"> 
+                     <label for="toogle-link">Toggle Link:</label>
+                     <a href="#" class="nclk" id ="toogle" onclick="ToggleVisibility()"> Show/Hide </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <button id="generateCodeButton"><img src="assets/images/tools2.png"> Generate Code</button>
+         <button id="runCodeButton"><i class="fa fa-eye"></i> Run Code</button>
+         <div id="codeOutput">
+            <!-- <h2>Generated Code</h2> -->
+            <h5 class="genrateheading">HTML</h5>
+            <textarea id="htmlCode" ></textarea>
+            <!-- <pre id="htmlCode"></pre> -->
+            <button class="copyButton"><i class="fa fa-clone"></i> Copy Code</button>
+            <h5 class="genrateheading">CSS</h5>
+            <textarea id="cssCode" ></textarea>
+            <!-- <pre id="cssCode"></pre> -->
+            <button class="copyButton"><i class="fa fa-clone"></i> Copy Code</button>
+            <h5 class="genrateheading">JAVASCRIPT</h5>
+            <textarea id="jsCode"></textarea>
+            <!-- <pre id="jsCode"></pre> -->
+            <button class="copyButton"><i class="fa fa-clone"></i> Copy Code</button>
+         </div>
+      </div>
+      <div class="cols col_4_of_12">
+         <h3>Sidebar</h3>
+      </div>
+   </div>
+</div>
+<script src="assets/js/custom.js"></script>
